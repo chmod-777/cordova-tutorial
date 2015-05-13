@@ -18,8 +18,6 @@ var HomeView = function(service) {
         this.render();
 	}
 
-	this.initialize();
-
 	this.render = function() {
 		this.$el.html(this.template());
 		$('.content', this.$el).html(employeeListView.$el);
@@ -32,4 +30,8 @@ var HomeView = function(service) {
 			employeeListView.setEmployees(employees);
 		});
 	};
+
+
+	this.initialize();
+
 }
