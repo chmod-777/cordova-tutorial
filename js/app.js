@@ -4,7 +4,7 @@
     /* ---------------------------------- Local Variables ---------------------------------- */
 
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html()); // var homeTpl = Handlebars.compile($("#home-tpl").html());
-    EmployeeListView.prototype.template = Handlebars.compile($("#home-tpl").html()); // var employeeListTpl = Handlebars.compile($("#employee-list-tpl").html());
+    EmployeeListView.prototype.template = Handlebars.compile($("#employee-list-tpl").html()); // var employeeListTpl = Handlebars.compile($("#employee-list-tpl").html());
 
     var service = new EmployeeService();
     service.initialize().done(function () {
