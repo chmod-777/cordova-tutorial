@@ -15,17 +15,19 @@
 
     service.initialize().done(function () {
       router.addRoute('', function() {
-          $('body').html(new HomeView(service).render().$el);
+          slider.PageSilder(new HomeView(service).render().$el); // $('body').html(new HomeView(service).render().$el);
       });
 
       router.addRoute('employees/:id', function(id) {
           service.findById(parseInt(id)).done(function(employee) {
-              $('body').html(new EmployeeView(employee).render().$el);
+            slider.PageSilder(new EmployeeView(employee).render().$el); // $('body').html(new EmployeeView(employee).render().$el);
           });
       });
 
       router.start();
     });
+
+    var slider = new PageSilder($("body"));
 
     /* --------------------------------- Event Registration -------------------------------- */
 
