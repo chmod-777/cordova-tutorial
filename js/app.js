@@ -9,6 +9,8 @@
 
     var service = new EmployeeService();
 
+    var slider = new PageSlider($("body"));
+
     service.initialize().done(function () {
         $('body').html(new HomeView(service).render().$el);
     });
@@ -26,8 +28,6 @@
 
       router.start();
     });
-
-    var slider = new PageSilder($("body"));
 
     /* --------------------------------- Event Registration -------------------------------- */
 
