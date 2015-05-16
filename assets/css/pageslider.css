@@ -11,24 +11,38 @@
     left: 0;
     width: 100%;
     height: 100%;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0, 1px);
+    transform: translate3d(0, 0, 0, 1px);
     text-align: left;
 }
 
+/*
+
+ Ian Etchells • 7 months ago
+
+This fails under IOS8 - the problem (blank page) is with webkit-transform - to fix edit pageslider.css and set the final prameters on the transforms to 1px
+
+e.g. -webkit-transform: translate3d(0, 0, 1px);
+transform: translate3d(0, 0, 1px);
+
+Hope it helps perhaps Ricardo's problem.
+
+
+*/
+
 .page.left {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0, 1px);
+    transform: translate3d(-100%, 0, 0, 1px);
 }
 
 .page.center {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0, 1px);
+    transform: translate3d(0, 0, 0, 1px);
 }
 
 .page.right {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(100%, 0, 0, 1px);
+    transform: translate3d(100%, 0, 0, 1px);
 }
 
 .page.transition {
