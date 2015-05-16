@@ -15,12 +15,12 @@
 
     service.initialize().done(function () {
       router.addRoute('', function() {
-          slider.PageSilder(new HomeView(service).render().$el); // $('body').html(new HomeView(service).render().$el);
+          slider.slidePage(new HomeView(service).render().$el); // $('body').html(new HomeView(service).render().$el);
       });
 
       router.addRoute('employees/:id', function(id) {
           service.findById(parseInt(id)).done(function(employee) {
-            slider.PageSilder(new EmployeeView(employee).render().$el); // $('body').html(new EmployeeView(employee).render().$el);
+            slider.slidePage(new EmployeeView(employee).render().$el); // $('body').html(new EmployeeView(employee).render().$el);
           });
       });
 
