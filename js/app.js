@@ -11,9 +11,9 @@
 
     var slider = new PageSlider($("body"));
 
-    service.initialize().done(function () {
+   /* service.initialize().done(function () {
         $('body').html(new HomeView(service).render().$el);
-    });
+    }); */
 
     service.initialize().done(function () {
       router.addRoute('', function() {
